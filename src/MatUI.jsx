@@ -21,6 +21,8 @@ import Badge from "@mui/material/Badge";
 import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
 import Tooltip from "./Tooltip";
+import Alert from "@mui/material/Alert"
+import Backdrop from "./Backdrop";
 
 export default function MatUI() {
   return (
@@ -61,7 +63,8 @@ export default function MatUI() {
       <Divider />
       <svg data-testid="DeleteIcon"></svg>
       <Tooltip />
+      <Alert severity="error">This is an error alert — check it out!</Alert>
+      <Backdrop />
     </div>
   );
 }
-
