@@ -20,7 +20,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import Badge from "@mui/material/Badge";
 import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
-import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
+import Tooltip from "./Tooltip";
 
 export default function MatUI() {
   return (
@@ -59,7 +59,9 @@ export default function MatUI() {
       </Badge>
       <Chip label="primary" color="primary" />
       <Divider />
-      <CatchingPokemonIcon />
+      <svg data-testid="DeleteIcon"></svg>
+      <Tooltip />
     </div>
   );
 }
+
