@@ -18,15 +18,14 @@ import ToggleButtons from "./ToggleGroup";
 import Avatar from "@mui/material/Avatar";
 import MailIcon from "@mui/icons-material/Mail";
 import Badge from "@mui/material/Badge";
-import Chip from "@mui/material/Chip";
-import Divider from "@mui/material/Divider";
-import Tooltip from "./Tooltip";
-import Alert from "@mui/material/Alert"
-import Backdrop from "./Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
+import Skeleton from "@mui/material/Skeleton";
+import Snackbar from "./Snackbar";
 
 export default function MatUI() {
   return (
     <div>
+      <Snackbar />
       <Box sx={{ width: 400, height: 200 }}>
         <Button />
         <Checkbox />
@@ -59,12 +58,16 @@ export default function MatUI() {
       <Badge badgeContent={4} color="secondary">
         <MailIcon color="action" />
       </Badge>
-      <Chip label="primary" color="primary" />
-      <Divider />
-      <svg data-testid="DeleteIcon"></svg>
-      <Tooltip />
-      <Alert severity="error">This is an error alert — check it out!</Alert>
-      <Backdrop />
+      <Stack>
+        <CircularProgress color="secondary" />
+        <CircularProgress color="success" />
+        <CircularProgress color="inherit" />
+      </Stack>
+      <Box sx={{ width: 300 }}>
+        <Skeleton />
+        <Skeleton animation="wave" />
+        <Skeleton animation={false} />
+      </Box>
     </div>
   );
 }
