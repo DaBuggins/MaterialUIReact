@@ -24,8 +24,7 @@ import Snackbar from "./Snackbar";
 
 export default function MatUI() {
   return (
-    <div>
-      <Snackbar />
+    <div>     
       <Box sx={{ width: 400, height: 200 }}>
         <Button />
         <Checkbox />
@@ -33,6 +32,7 @@ export default function MatUI() {
           <AddIcon />
         </Fab>
       </Box>
+       <Snackbar />
       <Box>
         <Typography component="legend">Controlled</Typography>
         <Rating name="simple-controlled" />
