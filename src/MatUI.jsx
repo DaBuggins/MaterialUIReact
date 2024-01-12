@@ -21,10 +21,13 @@ import Badge from "@mui/material/Badge";
 import CircularProgress from "@mui/material/CircularProgress";
 import Skeleton from "@mui/material/Skeleton";
 import Snackbar from "./Snackbar";
+import Backdrop from "./Backdrop";
+import ToggleGroup from "./ToggleGroup";
+import Tooltip from "./Tooltip";
 
 export default function MatUI() {
   return (
-    <div>     
+    <div>
       <Box sx={{ width: 400, height: 200 }}>
         <Button />
         <Checkbox />
@@ -32,7 +35,7 @@ export default function MatUI() {
           <AddIcon />
         </Fab>
       </Box>
-       <Snackbar />
+      <Snackbar />
       <Box>
         <Typography component="legend">Controlled</Typography>
         <Rating name="simple-controlled" />
@@ -68,6 +71,10 @@ export default function MatUI() {
         <Skeleton animation="wave" />
         <Skeleton animation={false} />
       </Box>
+      <ToggleGroup />
+      <Tooltip />
+      <Backdrop />
     </div>
   );
 }
+
